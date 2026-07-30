@@ -1,0 +1,190 @@
+{
+  "file_count": 37,
+  "files": [
+    {
+      "path": "cn/advanced-pack.md",
+      "md5": "43eabcad1faff39b9a7937ec90bd1123",
+      "size": 2122
+    },
+    {
+      "path": "cn/api-add-feedback.md",
+      "md5": "f37830cd30045943af229d3369887a5e",
+      "size": 3055
+    },
+    {
+      "path": "cn/api-add-message.md",
+      "md5": "cac4eef268db35fffabbc8a816aa7e0a",
+      "size": 4325
+    },
+    {
+      "path": "cn/api-chat.md",
+      "md5": "ba32ec681f0b99a07c4f95a070bf6884",
+      "size": 4058
+    },
+    {
+      "path": "cn/api-delete-memory.md",
+      "md5": "1f3591daf897d991cedda93501206008",
+      "size": 2780
+    },
+    {
+      "path": "cn/api-search-memory.md",
+      "md5": "00bff39298b2a35f3856d672e7a0d91b",
+      "size": 4645
+    },
+    {
+      "path": "cn/faq-and-limits.md",
+      "md5": "8896816fac7504884a6019c531ed59da",
+      "size": 3017
+    },
+    {
+      "path": "cn/features-async-mode.md",
+      "md5": "82fe2bd3dfdb5e5a406d756f7b62bb0e",
+      "size": 676
+    },
+    {
+      "path": "cn/features-filters.md",
+      "md5": "898839c9fadff2678b5fa94e6100b94e",
+      "size": 3608
+    },
+    {
+      "path": "cn/features-knowledge-base.md",
+      "md5": "dfc2637be76b8ec2ab79f44f9359c813",
+      "size": 3041
+    },
+    {
+      "path": "cn/features-multimodal.md",
+      "md5": "c557400204056cdb100ad291e090745c",
+      "size": 3054
+    },
+    {
+      "path": "cn/features-skill.md",
+      "md5": "96c39d21cd3f05bc2e69e24342e88f5b",
+      "size": 3526
+    },
+    {
+      "path": "cn/features-tool-memory.md",
+      "md5": "214f3d390494ffb0f214f71f894c4c64",
+      "size": 3806
+    },
+    {
+      "path": "cn/index.md",
+      "md5": "076244c00c4f9a299a5e5506068f36e3",
+      "size": 5548
+    },
+    {
+      "path": "cn/integration-guide.md",
+      "md5": "0267d805f9273a843e1e8ac2667d2661",
+      "size": 5814
+    },
+    {
+      "path": "cn/quick-start.md",
+      "md5": "2ed6b5e1fc48a067edf7a18015047bde",
+      "size": 4578
+    },
+    {
+      "path": "cn/reference-pack.md",
+      "md5": "d87cd0a1e4ea80b2f4809ba5efdc4962",
+      "size": 2082
+    },
+    {
+      "path": "cn/starter-pack.md",
+      "md5": "6c3c9b51157e5b2a16334adaac301715",
+      "size": 10802
+    },
+    {
+      "path": "en/advanced-pack.md",
+      "md5": "b59d415c3a7df7945617200e02a900d7",
+      "size": 2301
+    },
+    {
+      "path": "en/api-add-feedback.md",
+      "md5": "7002343968326564f45eb8b070dd0005",
+      "size": 3225
+    },
+    {
+      "path": "en/api-add-message.md",
+      "md5": "34e84acfa59fceb7ca9928f8ecf4aa4d",
+      "size": 3935
+    },
+    {
+      "path": "en/api-chat.md",
+      "md5": "5b319d93b50139c9b292bffcbe385a15",
+      "size": 4099
+    },
+    {
+      "path": "en/api-delete-memory.md",
+      "md5": "bdb9e5927485ff62bf2e3283039daa8b",
+      "size": 2632
+    },
+    {
+      "path": "en/api-search-memory.md",
+      "md5": "a7db579463f0bf428cab2c84a600242d",
+      "size": 4870
+    },
+    {
+      "path": "en/faq-and-limits.md",
+      "md5": "e4cdbb5b67b5ef42454c431ede8f821c",
+      "size": 3258
+    },
+    {
+      "path": "en/features-async-mode.md",
+      "md5": "9dc877197e4382a888ee83f4dd12dc38",
+      "size": 1081
+    },
+    {
+      "path": "en/features-filters.md",
+      "md5": "c62afde3550eabe82013af09ac1c06aa",
+      "size": 3680
+    },
+    {
+      "path": "en/features-knowledge-base.md",
+      "md5": "f90e18dd087d8ac4d8b9026178c06757",
+      "size": 3156
+    },
+    {
+      "path": "en/features-multimodal.md",
+      "md5": "bf22b491bf930bdf9ab43449bcd06a43",
+      "size": 3154
+    },
+    {
+      "path": "en/features-skill.md",
+      "md5": "6469876fafae74059839ff5a35fb2b69",
+      "size": 3832
+    },
+    {
+      "path": "en/features-tool-memory.md",
+      "md5": "958e20856eda4c7bc02f97391d2e8caf",
+      "size": 3792
+    },
+    {
+      "path": "en/index.md",
+      "md5": "8043db0c4704ea86a3517a70c679baf6",
+      "size": 6130
+    },
+    {
+      "path": "en/integration-guide.md",
+      "md5": "82b1c58ab7e3f446bb4508b731c5614e",
+      "size": 5165
+    },
+    {
+      "path": "en/quick-start.md",
+      "md5": "66c86d19971b9723e5c62c012f04918b",
+      "size": 4714
+    },
+    {
+      "path": "en/reference-pack.md",
+      "md5": "b9859dca2bc4b42481912ff83c06842f",
+      "size": 2179
+    },
+    {
+      "path": "en/starter-pack.md",
+      "md5": "9934256be154baff376f7a692ff93426",
+      "size": 12283
+    },
+    {
+      "path": "index.md",
+      "md5": "9576ec2a711208fcd9b4e718195ff418",
+      "size": 752
+    }
+  ]
+}

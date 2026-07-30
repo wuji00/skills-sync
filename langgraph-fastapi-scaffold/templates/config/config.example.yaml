@@ -1,0 +1,40 @@
+# ============================================================================
+# LangGraph + FastAPI Scaffold Configuration
+# ============================================================================
+# Copy this file to config.yaml for your project.
+# Environment variables are resolved with $VAR syntax.
+# Fields marked [startup-only] require a restart to change.
+
+config_version: 1
+
+log_level: info          # [startup-only] debug | info | warning | error
+
+# --- Model configurations ---
+models:
+  - name: gpt-4o
+    model: gpt-4o
+    display_name: GPT-4o
+    use: langchain_openai:ChatOpenAI
+    api_key: $OPENAI_API_KEY
+
+# --- Database [startup-only] ---
+database:
+  backend: sqlite         # sqlite | postgres
+  sqlite:
+    url: sqlite+aiosqlite:///./data/deerflow.db
+  postgres:
+    url: postgresql+asyncpg://postgres:postgres@localhost:5432/deerflow
+
+# --- Auth ---
+auth:
+  jwt_secret: $JWT_SECRET
+  token_expiry_hours: 24
+  bcrypt_rounds: 12       # [startup-only]
+
+# --- Checkpointer [startup-only] ---
+checkpointer:
+  backend: database       # memory | database
+
+# --- Stream Bridge [startup-only] ---
+stream_bridge:
+  backend: memory         # memory | redis
