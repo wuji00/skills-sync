@@ -73,19 +73,10 @@ $results | Sort-Object SizeGB -Descending | Format-Table -AutoSize
 | Docker | `Program Files\Docker\` + WSL 镜像 | 不用可卸载；WSL 发行版用 `wsl --unregister docker-desktop` |
 | Windows 组件清理 | `Dism /Online /Cleanup-Image /StartComponentCleanup` | 需管理员权限，清理后无法回滚旧补丁 |
 
-### 微信 `xwechat_files` 迁移脚本模板
+### 微信 `xwechat_files` 迁移
 
-```powershell
-$src = 'C:\Users\18435\xwechat_files'
-$dest = 'D:\xwechat_files'
-
-# 1. 复制到 D 盘
-robocopy $src $dest /E /Z /XO /R:3 /W:5 /MT:8
-
-# 2. 完全退出微信后执行以下两步：
-Remove-Item $src -Recurse -Force
-New-Item -ItemType Junction -Path $src -Target $dest
-```
+> ⚠️ 不要用"robocopy 后直接删源"的朴素脚本——目标若有旧残留，文件数不一致时删源会丢数据。
+> 完整带**独立文件数校验**的迁移方案见 Skill **`windows-file-migration`**（含可复用校验脚本 + junction 回链）。
 
 ## 不能动的目录
 
