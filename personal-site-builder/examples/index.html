@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="personal-site-builder skill 的五个案例：五种站型 × 五种视觉风格。">
+  <title>案例集 · personal-site-builder</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗂️</text></svg>">
+  <link rel="stylesheet" href="base.css">
+  <style>
+    :root { --max: 900px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } }
+    .case {
+      display: block; padding: 0; border-radius: 14px; overflow: hidden;
+      text-decoration: none; color: var(--text); border: 1px solid var(--fill-strong);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+    .case:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.09); color: var(--text); }
+    .swatch { height: 84px; display: flex; align-items: center; padding: 0 18px; gap: 10px; }
+    .swatch b { font-size: 15px; font-weight: 700; }
+    .body { padding: 16px 18px 18px; }
+    .body h3 { margin: 0 0 4px; font-size: 16.5px; }
+    .body .ia { font-size: 12.5px; color: var(--light); letter-spacing: .3px; }
+    .body p { margin: 8px 0 0; font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .sw-mono   { background: #fafbfc; color: #0c0d10; font-family: Inter, sans-serif; }
+    .sw-mag    { background: #111; color: #fff; font-family: "Helvetica Neue", sans-serif; letter-spacing: -.03em; }
+    .sw-serif  { background: #fdfcfa; color: #8b3a2f; font-family: Georgia, serif; }
+    .sw-warm   { background: #fbf7f0; color: #c4703f; font-family: Nunito, sans-serif; }
+    .sw-bento  { background: #f4f4f5; color: #4f46e5; font-family: Inter, sans-serif; }
+    .sw-term   { background: #0d1117; color: #3fb950; font-family: ui-monospace, monospace; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; display: block; overflow-x: auto; }
+    th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--fill-strong); white-space: nowrap; }
+    th { color: var(--light); font-size: 12.5px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <p class="kicker">SHOWCASE</p>
+    <h1>五个案例</h1>
+    <p class="meta">同一个 skill，五种站型 × 五种视觉风格。人物、经历与数据<strong>全部虚构</strong>，仅用于展示信息架构与视觉差异。第六种风格「终端极客」的变量值见 <code>references/visual-styles.md</code>。</p>
+
+    <h2>案例</h2>
+    <div class="grid">
+      <a class="case" href="resume/">
+        <div class="swatch sw-mono"><b>Aa</b><span>极简黑白</span></div>
+        <div class="body">
+          <h3>林知远 · 后端工程师</h3>
+          <p class="ia">求职转化 × L2 证明层</p>
+          <p>经历用「动词开头 + 结果结尾」写，技能分类不平铺，带打印样式可直接存 PDF 投递。</p>
+        </div>
+      </a>
+
+      <a class="case" href="portfolio/">
+        <div class="swatch sw-mag"><b>Aa</b><span>杂志大标题</span></div>
+        <div class="body">
+          <h3>周砚 · 品牌设计</h3>
+          <p class="ia">作品集展示 × L2 证明层</p>
+          <p>超大标题 + 作品网格，案例页按「问题→角色→约束→过程→结果→反思」六段展开。</p>
+        </div>
+      </a>
+
+      <a class="case" href="consulting/">
+        <div class="swatch sw-serif"><b>Aa</b><span>编辑排版</span></div>
+        <div class="body">
+          <h3>沈让 · 组织顾问</h3>
+          <p class="ia">咨询获客 × L2 证明层</p>
+          <p>衬线窄栏 + 首字下沉。首屏讲「为谁解决什么」而不是个人经历，主行动是预约通话。</p>
+        </div>
+      </a>
+
+      <a class="case" href="garden/">
+        <div class="swatch sw-warm"><b>Aa</b><span>暖色手作</span></div>
+        <div class="body">
+          <h3>阿禾的花园 · 记录</h3>
+          <p class="ia">长期记录 × L3 内容系统层</p>
+          <p>Now 页 + 主题入口 + 书架。全站显示「最后更新时间」，结构为长期低成本维护设计。</p>
+        </div>
+      </a>
+
+      <a class="case" href="maker/">
+        <div class="swatch sw-bento"><b>Aa</b><span>Bento 卡片</span></div>
+        <div class="body">
+          <h3>Kai · 独立开发者</h3>
+          <p class="ia">独立开发者 × L2 证明层</p>
+          <p>卡片仪表盘，一屏看完 MRR、产品和用户数。已下线的三个产品也照实列出。</p>
+        </div>
+      </a>
+
+    </div>
+
+    <h2>差异对照</h2>
+    <table>
+      <thead><tr><th>案例</th><th>主行动</th><th>首屏第一句在讲</th><th>正文字体</th><th>容器宽度</th></tr></thead>
+      <tbody>
+        <tr><td>求职</td><td>下载简历 PDF</td><td>目标岗位 + 求职状态</td><td>Inter 无衬线</td><td>720px</td></tr>
+        <tr><td>作品集</td><td>查看合作方式</td><td>作品主张</td><td>Archivo 800 字重</td><td>1120px</td></tr>
+        <tr><td>咨询</td><td>预约诊断通话</td><td>为谁解决什么问题</td><td>Source Serif 衬线</td><td>680px</td></tr>
+        <tr><td>记录</td><td>无（浏览即目的）</td><td>现在在做什么</td><td>Nunito 圆体</td><td>720px</td></tr>
+        <tr><td>独立开发</td><td>看产品</td><td>做了几个 / 活着几个</td><td>Inter 无衬线</td><td>1040px</td></tr>
+      </tbody>
+    </table>
+    <p class="small">五个站共用同一份 <code>base.css</code>（排版基线 + 组件），每个案例只加一份 <code>style.css</code> 覆盖 <code>:root</code> 变量和少量专用组件——这正是 skill 里「改风格 = 改变量，不要重写 CSS」的做法。</p>
+
+    <footer class="site-footer">
+      <p class="small">由 <code>personal-site-builder</code> skill 生成 · 全部案例均为演示用途，未部署、<code>noindex</code></p>
+    </footer>
+  </main>
+</body>
+</html>

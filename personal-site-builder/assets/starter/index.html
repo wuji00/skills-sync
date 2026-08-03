@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<!-- TODO: 一句话描述，会出现在搜索结果和社交分享里 -->">
+  <title><!-- TODO: 姓名 · 一句话定位 --></title>
+  <link rel="stylesheet" href="/site.css">
+  <script src="/nav.js" defer></script>
+</head>
+<body>
+  <main class="site">
+
+    <!-- ① Hero：三行内说清 你是谁 / 你能干嘛 / 怎么找你。所有站型都要有 -->
+    <section id="hero">
+      <h1>👋 <!-- TODO: 可以叫我 XXX --></h1>
+      <p class="meta"><!-- TODO: 身份A / 身份B / 身份C --></p>
+      <p><!-- TODO: 2-3 句自我介绍，带上可验证的数字 --></p>
+
+      <div class="contact-row">
+        <a class="contact-btn contact-btn--dark" href="mailto:<!-- TODO -->">✉️ 发送邮件</a>
+        <a class="contact-btn contact-btn--light" href="<!-- TODO -->" target="_blank" rel="noreferrer">🔗 <!-- TODO: 主要社交平台 --></a>
+      </div>
+    </section>
+
+    <!-- ② 卡片组：适合「合作方式 / 服务 / 平台矩阵」。不需要就整段删掉 -->
+    <section id="cards-section">
+      <h2><!-- TODO: 小标题 --></h2>
+      <div class="cards cards--lines">
+        <a class="card" href="<!-- TODO -->">
+          <span class="no">01</span>
+          <span class="t"><!-- TODO: 标题 --></span>
+          <p class="d"><!-- TODO: 一句话说明 --></p>
+          <span class="aud">适合：<!-- TODO --></span>
+          <span class="go">查看详情 →</span>
+        </a>
+        <!-- 复制上面这个 .card，通常 3–4 个 -->
+      </div>
+    </section>
+
+    <!-- ③ 行列表：适合「产品 / 作品 / 项目 / 文章」。teaser 只放 3 条 + 更多链接 -->
+    <section id="list-section">
+      <h2><!-- TODO: 小标题 --></h2>
+      <div class="rowitem">
+        <h3><!-- TODO: 名称 --> <a class="ext" href="<!-- TODO -->" target="_blank" rel="noreferrer" aria-label="访问链接">&#8599;</a></h3>
+        <p><!-- TODO: 一句话 + 数字（用户数 / Star / 阅读量） --></p>
+      </div>
+      <!-- 复制上面这个 .rowitem -->
+      <a class="more-link" href="<!-- TODO: /products/ -->">查看全部 →</a>
+    </section>
+
+    <!-- ④ 页脚 -->
+    <footer class="site-footer">
+      <p class="small">© <span id="year">2026</span> <!-- TODO: 姓名 --> · <a href="mailto:<!-- TODO -->">邮箱</a></p>
+    </footer>
+
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

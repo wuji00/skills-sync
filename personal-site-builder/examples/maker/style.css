@@ -1,0 +1,63 @@
+/* 案例 E · 独立开发者 × L2 · 风格：Bento 卡片仪表盘 */
+:root {
+  --bg: #f4f4f5; --text: #18181b; --muted: #71717a; --light: #a1a1aa;
+  --accent: #4f46e5;
+  --surface: #fff;
+  --fill: #fff; --fill-strong: rgba(24,24,27,.1);
+  --link: var(--text); --link-underline: rgba(79,70,229,.45); --link-underline-hover: var(--accent);
+  --invert-bg: #18181b; --invert-text: #fff;
+  --max: 1040px;
+  --sans: "Inter", ui-sans-serif, -apple-system, "PingFang SC", sans-serif;
+  --shadow: 0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #09090b; --text: #fafafa; --muted: #a1a1aa; --light: #71717a;
+  --accent: #818cf8; --surface: #18181b;
+  --fill: #18181b; --fill-strong: rgba(255,255,255,.12);
+  --link-underline: rgba(129,140,248,.5);
+  --invert-bg: #fafafa; --invert-text: #09090b;
+  --shadow: 0 1px 3px rgba(0,0,0,.5);
+  color-scheme: dark;
+}
+
+.site { padding: 48px 24px 90px; }
+h1 { font-size: 36px; }
+h2 { font-size: 19px; margin-top: 52px; margin-bottom: 16px; }
+
+/* bento 网格 */
+.bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.b {
+  background: var(--surface); border-radius: 20px; padding: 22px;
+  box-shadow: var(--shadow); text-decoration: none; color: var(--text);
+  display: flex; flex-direction: column; transition: transform 180ms ease, box-shadow 180ms ease;
+}
+a.b:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+.b--w2 { grid-column: span 2; }
+.b--w4 { grid-column: span 4; }
+.b--tall { grid-row: span 2; }
+@media (max-width: 860px) { .bento { grid-template-columns: repeat(2, 1fr); } .b--w4 { grid-column: span 2; } }
+@media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .b--w2, .b--w4 { grid-column: span 1; } .b--tall { grid-row: span 1; } }
+
+.b .lbl { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; color: var(--light); text-transform: uppercase; }
+.b .big { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; margin: 6px 0 0; line-height: 1.05; }
+.b .big small { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.b .sub { font-size: 13.5px; color: var(--muted); margin: 4px 0 0; }
+.b h3 { margin: 8px 0 4px; font-size: 17px; }
+.b p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.6; }
+.b .foot { margin-top: auto; padding-top: 14px; font-size: 13px; color: var(--accent); font-weight: 600; }
+
+.pill {
+  display: inline-block; align-self: flex-start; padding: 2px 9px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .2px;
+}
+.pill--live { background: rgba(22,163,74,.13); color: #15803d; }
+.pill--sunset { background: rgba(113,113,122,.16); color: var(--muted); }
+:root[data-theme="dark"] .pill--live { background: rgba(74,222,128,.16); color: #4ade80; }
+
+.b--dark { background: var(--invert-bg); color: var(--invert-text); }
+.b--dark .lbl, .b--dark .sub, .b--dark p { color: rgba(255,255,255,.62); }
+:root[data-theme="dark"] .b--dark .lbl,
+:root[data-theme="dark"] .b--dark .sub,
+:root[data-theme="dark"] .b--dark p { color: rgba(0,0,0,.6); }
+.b--dark .foot { color: inherit; opacity: .8; }

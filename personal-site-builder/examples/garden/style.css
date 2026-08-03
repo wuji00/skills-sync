@@ -1,0 +1,56 @@
+/* 案例 D · 长期记录 × L3 · 风格：暖色手作（米色底、圆角大、细描边） */
+:root {
+  --bg: #fbf7f0; --text: #33302b; --muted: #7a7368; --light: #9a9287;
+  --accent: #c4703f;
+  --fill: #f2ece1; --fill-strong: rgba(51,48,43,.13);
+  --link: var(--text); --link-underline: rgba(196,112,63,.5); --link-underline-hover: var(--accent);
+  --invert-bg: #33302b; --invert-text: #fbf7f0;
+  --max: 720px;
+  --sans: "Nunito", ui-rounded, "Hiragino Maru Gothic ProN", "PingFang SC", sans-serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #24211d; --text: #ece5da; --muted: #a89f92; --light: #877e72;
+  --accent: #e0946a;
+  --fill: #2e2a25; --fill-strong: rgba(255,255,255,.14);
+  --link-underline: rgba(224,148,106,.5);
+  --invert-bg: #ece5da; --invert-text: #24211d;
+  color-scheme: dark;
+}
+
+body { font-size: 16.5px; line-height: 1.85; }
+h1 { font-size: 34px; }
+h2 { font-size: 22px; margin-top: 66px; }
+.contact-btn, .card { border-radius: 16px; }
+
+.updated { font-size: 13.5px; color: var(--light); }
+.updated b { color: var(--accent); font-weight: 700; }
+
+/* 主题入口标签 */
+.topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
+.topics a {
+  padding: 6px 14px; border: 1px solid var(--fill-strong); border-radius: 999px;
+  font-size: 14px; text-decoration: none; color: var(--muted); background: var(--bg);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.topics a:hover { background: var(--fill); color: var(--text); }
+.topics a b { color: var(--light); font-weight: 400; font-size: 12.5px; }
+
+/* 记录条目 */
+.note { padding: 18px 20px; margin: 10px 0; background: var(--fill); border-radius: 16px; border: 1px solid rgba(0,0,0,.05); }
+.note h3 { margin: 0 0 4px; font-size: 17px; }
+.note h3 a { text-decoration: none; }
+.note .when { font-size: 13px; color: var(--light); }
+.note p { margin: 6px 0 0; color: var(--muted); font-size: 15.5px; }
+:root[data-theme="dark"] .note { border-color: rgba(255,255,255,.06); }
+
+/* 书影音 */
+.shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.book { padding: 14px 16px; border: 1px dashed var(--fill-strong); border-radius: 14px; }
+.book b { display: block; font-size: 15px; }
+.book span { display: block; font-size: 13px; color: var(--light); margin-top: 3px; }
+.stars { color: var(--accent); font-size: 13px; letter-spacing: 1px; }
+
+/* now 页强调块 */
+.nowbox { padding: 20px 22px; border-radius: 18px; background: var(--fill); border: 1px solid var(--fill-strong); }
+.nowbox p:last-child { margin-bottom: 0; }

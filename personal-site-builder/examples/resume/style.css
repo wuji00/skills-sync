@@ -1,0 +1,38 @@
+/* 案例 A · 求职转化 × L2 · 风格：极简黑白（base.css 的默认值，仅做少量收紧） */
+:root { --max: 720px; }
+h1 { font-size: 36px; margin-bottom: 10px; }
+h2 { margin-top: 60px; font-size: 21px; }
+
+.role-line { font-size: 17px; color: var(--muted); margin: 0 0 6px; }
+.status {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 700; background: #e7f5ea; color: #14683a;
+}
+:root[data-theme="dark"] .status { background: rgba(63,185,80,.16); color: #57d16d; }
+
+/* 经历条目：左时间右内容 */
+.exp { display: grid; grid-template-columns: 132px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--fill-strong); }
+.exp:last-of-type { border-bottom: none; }
+.exp .when { font-size: 13.5px; color: var(--light); font-variant-numeric: tabular-nums; padding-top: 3px; }
+.exp h3 { margin: 0 0 2px; font-size: 16.5px; }
+.exp .org { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+.exp ul { margin: 0; padding-left: 1.1em; }
+.exp li { font-size: 14.5px; color: var(--muted); margin: 6px 0; }
+.exp li b { color: var(--text); font-weight: 700; }
+@media (max-width: 600px) { .exp { grid-template-columns: 1fr; gap: 6px; } }
+
+/* 技能：分类横排 */
+.skillrow { display: grid; grid-template-columns: 132px 1fr; gap: 20px; padding: 12px 0; }
+.skillrow .cat { font-size: 13.5px; color: var(--light); }
+.skillrow .items { font-size: 14.5px; }
+@media (max-width: 600px) { .skillrow { grid-template-columns: 1fr; gap: 2px; } }
+
+/* 打印友好：投递前可直接 Cmd+P 存 PDF */
+@media print {
+  .sk-nav, .demo-banner, .contact-row, .site-footer { display: none !important; }
+  body { padding-top: 0 !important; font-size: 11pt; background: #fff; color: #000; }
+  .site { max-width: none; padding: 0; }
+  h2 { margin-top: 22px; }
+  .exp, .skillrow { break-inside: avoid; }
+  a { text-decoration: none; color: #000; }
+}

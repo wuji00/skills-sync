@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="示例：求职转化 × L2 · 极简黑白风格的在线简历站。人物为虚构。">
+  <title>林知远 · 后端工程师（示例站）</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="demo-banner">示例站 · 人物与经历均为<strong>虚构</strong>，用于演示「求职转化 × L2 · 极简黑白」 · <a href="../">← 返回案例集</a></p>
+
+  <main class="site">
+    <section id="hero">
+      <h1>林知远</h1>
+      <p class="role-line">后端工程师 · 分布式系统 / 高并发 · 深圳（可 remote）</p>
+      <p class="small"><span class="status">正在看机会</span></p>
+      <p>7 年后端，主要做交易链路和消息中间件。上一份工作把订单系统的 P99 从 840ms 压到 190ms，并支撑住了大促当天 12 倍的流量峰值。擅长在不停服的前提下做架构迁移。</p>
+
+      <div class="contact-row">
+        <a class="contact-btn contact-btn--dark" href="#">↓ 下载简历 PDF</a>
+        <a class="contact-btn contact-btn--light" href="#">✉️ 邮箱联系</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>工作经历</h2>
+
+      <div class="exp">
+        <div class="when">2022.03 – 至今</div>
+        <div>
+          <h3>后端技术专家</h3>
+          <p class="org">某电商平台 · 交易中台</p>
+          <ul>
+            <li>重构订单核心链路，P99 延迟从 840ms 降到 <b>190ms</b>，机器成本减少 <b>34%</b></li>
+            <li>主导消息中间件从 RabbitMQ 迁到 Pulsar，<b>零停机</b>完成，日均处理 <b>4.2 亿</b>条消息</li>
+            <li>带 6 人小组，建立值班与复盘机制，线上 P0 事故从年均 5 次降到 <b>1 次</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="when">2019.06 – 2022.02</div>
+        <div>
+          <h3>高级后端工程师</h3>
+          <p class="org">某 SaaS 公司 · 基础平台组</p>
+          <ul>
+            <li>从 0 搭建多租户权限系统，支撑 <b>2300+</b> 企业客户，至今仍在服役</li>
+            <li>把 CI 流水线时长从 22 分钟优化到 <b>6 分钟</b>，团队日均发布次数翻 3 倍</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="when">2017.07 – 2019.05</div>
+        <div>
+          <h3>后端工程师</h3>
+          <p class="org">某创业公司 · 增长团队</p>
+          <ul>
+            <li>负责用户增长相关的埋点与 A/B 实验平台，服务 <b>40+</b> 个实验</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>技能</h2>
+      <div class="skillrow"><div class="cat">主力语言</div><div class="items">Go（7 年）· Java（4 年）· Python（脚本与数据处理）</div></div>
+      <div class="skillrow"><div class="cat">中间件</div><div class="items">Pulsar · Kafka · Redis · MySQL 分库分表 · TiDB</div></div>
+      <div class="skillrow"><div class="cat">基础设施</div><div class="items">Kubernetes · Prometheus · Grafana · ArgoCD</div></div>
+      <div class="skillrow"><div class="cat">擅长场景</div><div class="items">高并发交易链路 · 不停服架构迁移 · 稳定性治理</div></div>
+    </section>
+
+    <section>
+      <h2>项目</h2>
+      <div class="rowitem">
+        <h3>订单链路重构</h3>
+        <p><b>问题：</b>大促期间订单超时率 3.7%。<b>我做的：</b>拆分同步链路、引入本地消息表做最终一致、热点账户分片。<b>结果：</b>超时率降到 0.2%，大促零事故。</p>
+      </div>
+      <div class="rowitem">
+        <h3>消息中间件迁移</h3>
+        <p><b>问题：</b>RabbitMQ 在峰值下堆积严重且难以水平扩展。<b>我做的：</b>双写 + 影子消费验证 3 个月，分批切流。<b>结果：</b>零停机迁移完成，扩容耗时从小时级降到分钟级。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育</h2>
+      <div class="skillrow"><div class="cat">2013 – 2017</div><div class="items">某大学 · 计算机科学与技术 · 本科</div></div>
+    </section>
+
+    <footer class="site-footer">
+      <p class="small">示例站 · 由 personal-site-builder skill 生成 · <a href="../">返回案例集</a></p>
+    </footer>
+  </main>
+</body>
+</html>

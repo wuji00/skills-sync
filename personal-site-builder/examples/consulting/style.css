@@ -1,0 +1,68 @@
+/* 案例 C · 咨询获客 × L2 · 风格：编辑排版（衬线正文、窄栏、砖红强调） */
+:root {
+  --bg: #fdfcfa; --text: #1a1815; --muted: #6b6660; --light: #8c867e;
+  --accent: #8b3a2f;
+  --fill: rgba(26,24,21,.045); --fill-strong: rgba(26,24,21,.11);
+  --link: var(--text); --link-underline: rgba(139,58,47,.45); --link-underline-hover: var(--accent);
+  --invert-bg: #1a1815; --invert-text: #fdfcfa;
+  --max: 680px;
+  --sans: "Source Serif 4", "Iowan Old Style", Georgia, "Songti SC", "STSong", serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #16140f; --text: #ece7dd; --muted: #a9a196; --light: #857d72;
+  --accent: #d98167;
+  --fill: rgba(255,255,255,.05); --fill-strong: rgba(255,255,255,.12);
+  --link-underline: rgba(217,129,103,.5);
+  --invert-bg: #ece7dd; --invert-text: #16140f;
+  color-scheme: dark;
+}
+
+body { font-size: 19px; line-height: 1.8; }
+h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 400; letter-spacing: -0.015em; line-height: 1.2; }
+h2 { font-size: 25px; font-weight: 400; margin-top: 70px; }
+h3 { font-size: 19px; font-weight: 700; }
+.kicker { font-family: ui-sans-serif, -apple-system, "PingFang SC", sans-serif; font-size: 12px; letter-spacing: 3px; }
+.contact-btn { border-radius: 2px; font-family: ui-sans-serif, -apple-system, "PingFang SC", sans-serif; }
+.lede { font-size: 22px; line-height: 1.65; color: var(--muted); }
+.lede b { color: var(--text); font-weight: 700; }
+
+/* 首字下沉 */
+.dropcap::first-letter {
+  float: left; font-size: 62px; line-height: .82; font-weight: 700;
+  margin: 6px 10px 0 0; color: var(--accent);
+}
+
+/* 服务条目 */
+.svc { padding: 26px 0; border-bottom: 1px solid var(--fill-strong); }
+.svc:last-of-type { border-bottom: none; }
+.svc h3 { margin: 0 0 6px; }
+.svc p { margin: 0 0 8px; color: var(--muted); font-size: 17.5px; }
+.svc .who { font-size: 15px; color: var(--light); font-style: italic; }
+.svc .price { font-size: 15px; color: var(--accent); font-family: ui-sans-serif, -apple-system, sans-serif; }
+
+/* 流程步骤 */
+.steps { counter-reset: s; margin: 0; padding: 0; list-style: none; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 20px 46px; }
+.steps li::before {
+  counter-increment: none; content: counter(s); position: absolute; left: 0; top: 2px;
+  width: 30px; height: 30px; border: 1px solid var(--accent); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--accent);
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+}
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 17px; }
+
+/* 客户评价：必须有授权才能放，示例中标注为虚构 */
+.quote-block { border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 26px 0; }
+.quote-block p { font-style: italic; margin: 0 0 8px; }
+.quote-block cite { font-style: normal; font-size: 15px; color: var(--light); }
+
+/* FAQ */
+details { border-bottom: 1px solid var(--fill-strong); padding: 16px 0; }
+details summary { cursor: pointer; font-weight: 700; font-size: 17.5px; list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "+ "; color: var(--accent); }
+details[open] summary::before { content: "− "; }
+details p { margin: 12px 0 0; color: var(--muted); font-size: 17px; }
